@@ -1,6 +1,11 @@
 node() {
     stage('list files'){
-        git url: 'https://github.com/threem/ro-test-repo.git', branch: CHANGE_BRANCH
+        if(CHANGE_BRANCH){
+            branch = CHANGE_BRANCH
+        } else {
+            branch = BRANCH_NAME
+        }
+        git url: 'https://github.com/threem/ro-test-repo.git', branch: branch
         sh "env"
         sh "ls -l"
     }
