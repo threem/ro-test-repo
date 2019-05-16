@@ -10,5 +10,6 @@ node() {
         }
     stage('NOTIFY'){
         echo "email & IM notify about status"
+        echo "slack notification"
     }
 }
