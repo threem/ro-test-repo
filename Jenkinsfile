@@ -1,9 +1,9 @@
 node() {
     stage('list files'){
-        if(CHANGE_BRANCH){
-            branch = CHANGE_BRANCH
+        if(env.CHANGE_BRANCH){
+            branch = env.CHANGE_BRANCH
         } else {
-            branch = BRANCH_NAME
+            branch = env.BRANCH_NAME
         }
         git url: 'https://github.com/threem/ro-test-repo.git', branch: branch
         sh "env"
