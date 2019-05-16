@@ -1,6 +1,6 @@
 node() {
     stage('list files'){
-        git url: 'https://github.com/threem/ro-test-repo.git'
+        git url: 'https://github.com/threem/ro-test-repo.git', branch: CHANGE_BRANCH
         sh "env"
         sh "ls -l"
     }
