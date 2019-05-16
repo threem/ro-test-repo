@@ -1,5 +1,7 @@
 node() {
     stage('list files'){
+        git url: 'https://github.com/threem/ro-test-repo.git'
+        sh "env"
         sh "ls -l"
     }
     stage('build'){
