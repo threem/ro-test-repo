@@ -7,7 +7,7 @@ node() {
         }
         git url: 'https://github.com/threem/ro-test-repo.git', branch: branch
         sh "env"
-        sh "ls -l"
+        sh "for file in `ls file*`; do cat \$file; done"
     }
     stage('build'){
         echo "docker build"
