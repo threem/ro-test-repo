@@ -22,4 +22,12 @@ node() {
         echo "email & IM notify about status"
         echo "slack notification"
     }
+    if(branch == 'master'){
+        stage('RELEASE'){
+            echo "release artifact"
+        }
+        stage('PROMOTE TO NEXT ENV'){
+            echo "drop email to QA deployment, create PR what ever we decide"
+        }
+    }
 }
