@@ -19,8 +19,9 @@ node() {
         echo "ECR push"
     }
     stage('NOTIFY'){
-        echo "email & IM notify about status"
+        echo "email & IM notify about status and dev deployment"
         echo "slack notification"
+        echo "retrieve deployment & application statuses"
     }
     if(branch == 'master'){
         stage('RELEASE'){
