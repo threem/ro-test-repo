@@ -24,7 +24,7 @@ node() {
     }
     if(branch == 'master'){
         stage('RELEASE'){
-            echo "release artifact"
+            echo "release artifact, create appropriated tag,version etc"
         }
         stage('PROMOTE TO NEXT ENV'){
             echo "drop email to QA deployment, create PR what ever we decide"
