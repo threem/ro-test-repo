@@ -16,7 +16,7 @@ node() {
         echo "docker run & test something & docker stop"
     }
     stage('push to ECR'){
-        echo "ECR push"
+        echo "ECR push PUSH WITH something SNAPSHOT prefixed releases in versionID"
     }
     stage('NOTIFY'){
         echo "email & IM notify about status and dev deployment"
@@ -25,7 +25,7 @@ node() {
     }
     if(branch == 'master'){
         stage('RELEASE'){
-            echo "release artifact, create appropriated tag,version etc"
+            echo "release artifact, create appropriated tag,version that say us that this software RELEASED"
         }
         stage('PROMOTE TO NEXT ENV'){
             echo "drop email to QA deployment, create PR what ever we decide"
